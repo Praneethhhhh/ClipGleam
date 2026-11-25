@@ -1,0 +1,53 @@
+{
+  "process": {
+    "title": "How solar panels make electricity",
+    "scenes": [
+      {"kind":"process","heading":"Start with sunlight","beats":[
+        {"label":"Light arrives","narration":"Light arrives at a solar panel in tiny packets of energy called photons. The panel is made up of smaller units called solar cells."},
+        {"label":"Electrons move","narration":"Electrons can break free when a solar cell absorbs enough light energy. The cell is built to push those freed charges in a preferred direction."}
+      ]},
+      {"kind":"process","heading":"Turn movement into power","beats":[
+        {"label":"Direct current","narration":"Direct current flows when a circuit gives the charges a path. Inside that circuit, electricity moves in one direction, like traffic on a one way street."},
+        {"label":"Alternating current","narration":"Alternating current is what most household appliances use. An inverter changes the panel's direct current into alternating current so it can power those devices."}
+      ]},
+      {"kind":"concept","heading":"What changes the output?","beats":[
+        {"label":"Sun and shade","narration":"Sun and shade affect how much energy reaches each cell. A rooftop system usually makes more electricity in direct sunlight than under heavy cloud or shade."},
+        {"label":"Follow the energy","narration":"Follow the energy from sunlight to moving charges, through an inverter, and into your home. That is the basic path from a sunny roof to a working appliance."}
+      ]}
+    ]
+  },
+  "comparison": {
+    "title": "Weather versus climate",
+    "scenes": [
+      {"kind":"comparison","heading":"Two different questions","beats":[
+        {"label":"Weather","narration":"Weather describes the conditions around you now or soon. If you are deciding whether to take an umbrella this afternoon, you want a weather forecast."},
+        {"label":"Climate","narration":"Climate describes patterns over many years. If you are deciding which crops normally grow in a region, the long term pattern is what you need."}
+      ]},
+      {"kind":"comparison","heading":"An afternoon and a trend","beats":[
+        {"label":"A cold afternoon","narration":"A cold afternoon can happen during a warm year. One observation tells you something about that time and place, but it cannot tell you whether a long term trend has changed."},
+        {"label":"Years of records","narration":"Years of records let you compare averages and look at how common extreme events are. Climate is about how the whole pattern behaves, including its variation."}
+      ]},
+      {"kind":"concept","heading":"Choose the right scale","beats":[
+        {"label":"Plan today","narration":"Plan today with the weather forecast. Check the predicted rain and temperature for the hours when you will actually be outdoors."},
+        {"label":"Plan ahead","narration":"Plan ahead with climate records. The same thermometer can help answer both questions, but only when you use measurements across the time period that matters."}
+      ]}
+    ]
+  },
+  "concept": {
+    "title": "What is opportunity cost?",
+    "scenes": [
+      {"kind":"concept","heading":"A choice uses a resource","beats":[
+        {"label":"One free hour","narration":"One free hour gives you several choices. You could practise guitar, call a friend, or watch a show. You can only spend that same hour once."},
+        {"label":"Best alternative","narration":"Best alternative means the option you would choose if your first choice disappeared. Suppose you practise guitar, and calling a friend would have been your next choice."}
+      ]},
+      {"kind":"comparison","heading":"Price and opportunity cost","beats":[
+        {"label":"Money paid","narration":"Money paid is what leaves your wallet. Practising guitar at home may cost nothing today, so the immediate price can be zero."},
+        {"label":"Value forgone","narration":"Value forgone is what you give up by making the choice. In this example, it is the value of the time you would have spent talking to your friend."}
+      ]},
+      {"kind":"process","heading":"Use it in a decision","beats":[
+        {"label":"Name the alternative","narration":"Name the alternative you would realistically take. You do not add up every option you skipped, because you could not have done all of them."},
+        {"label":"Compare the value","narration":"Compare the value of your choice with that next best alternative. Thinking this way helps you notice the trade off, even when there is no price tag."}
+      ]}
+    ]
+  }
+}

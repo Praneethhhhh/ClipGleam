@@ -1,0 +1,8 @@
+.interactions-composition {
+  font-family: 'DM Sans', sans-serif;
+}
+.interactions-camera {
+  width: 100%;
+  transform-origin: center center;
+  will-change: transform;
+}
