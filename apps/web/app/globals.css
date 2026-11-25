@@ -196,3 +196,45 @@ summary { width: fit-content; cursor: pointer; font-weight: 620; }
   .nav-row nav { gap: 8px; }
   .nav-row nav a[href="#workflow"] { display: none; }
 }
+
+.projects-shell { padding-block: clamp(40px, 8vw, 86px); }
+.project-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-block: 18px 30px; }
+.project-heading h1, .project-empty h1 { font-size: clamp(38px, 6vw, 62px); overflow-wrap: anywhere; }
+.project-heading p, .project-empty p, .project-list p { margin-top: 8px; color: var(--muted); }
+.project-list { padding: 0; margin: 0 0 18px; list-style: none; display: grid; gap: 12px; }
+.project-list a {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 16px;
+  border: 1px solid var(--rule); border-radius: 16px; padding: 18px 22px;
+}
+.project-list a:hover { border-color: var(--blue); }
+.project-list h2 { font-size: 22px; grid-column: 1; overflow-wrap: anywhere; }
+.project-list p { grid-column: 1; }
+.project-list span { grid-area: 1 / 2 / 3 / 3; align-self: center; color: var(--blue); }
+.project-empty { padding: clamp(24px, 6vw, 62px); background: var(--surface); border-radius: 20px; }
+.project-empty h2, .project-dialog h2 { font-size: 28px; }
+.project-dialog {
+  width: min(460px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 24px;
+  background: var(--canvas); color: var(--ink); border: 1px solid var(--rule); border-radius: 20px;
+}
+.project-dialog::backdrop { background: rgb(0 0 0 / 48%); }
+.project-dialog h2 { margin-bottom: 18px; }
+.project-dialog p { margin-bottom: 14px; overflow-wrap: anywhere; }
+.access-form select {
+  min-height: 48px; padding: 10px 14px; border: 1px solid var(--rule); border-radius: 12px;
+  background: var(--surface); color: var(--ink); font: inherit;
+}
+.project-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.project-dialog .project-actions { justify-content: flex-end; }
+.project-actions .text-link { background: transparent; border: 0; }
+.project-danger { color: #c52e37; }
+html[data-theme="dark"] .project-danger { color: #ff8187; }
+.project-delete { background: #b72730; color: white; }
+.rename-form { max-width: 440px; }
+@media (max-width: 520px) {
+  .project-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .nav-row nav .primary-button { min-height: 40px; padding-inline: 12px; }
+}
+@media (max-width: 400px) {
+  nav[aria-label="Dashboard navigation"] { gap: 4px; }
+  nav[aria-label="Dashboard navigation"] > a { display: none; }
+}
