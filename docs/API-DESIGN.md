@@ -218,6 +218,18 @@ Standard error example:
 - Test cancel/claim and reschedule/claim races, account replacement, DST overlap and gap, late dispatch, media expiry during fetch and lost publish response. Require a confirmed single publication in tests with real eligible accounts.
 - Trace FR-01/13/14 through identity, CAS and deletion; FR-02–07 through planning/storyboard/validation; FR-08/09 through durable jobs/media; FR-10–12 through Instagram and publication. Review provider configuration and any disabled optional capability before pilots.
 
+## Owner invitation endpoints
+
+| Route | Behavior |
+| --- | --- |
+| GET /api/invitations | Owner only. Returns recent email addresses, status and timestamps. |
+| POST /api/invitations | Owner only. Accepts an email and returns the invitation link once. Conflicts with an existing credential account or active invitation for that email. |
+| DELETE /api/invitations/{id} | Owner only. Revokes a pending, unexpired link. |
+| POST /api/invitations/redeem | Accepts the token, display name and new password. Consumes the invitation and creates creator access in one transaction. The recipient signs in through Better Auth afterward. |
+
+The invitation token is conveyed in the URL fragment and stored as a digest. Links expire after 72 hours and permit ten valid-token redemption attempts. Owner access requires the configured immutable account ID and active pilot admission. Invitation responses use private, no-store caching.
+
+
 ## References
 
 - [NamasteVideo.ai API design](https://github.com/akshaymarch7/namaste-video-ai/blob/main/API_DESIGN.md) informed the contract structure, candidate review, separation of revisions and publication recovery.
