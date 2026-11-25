@@ -18,15 +18,16 @@ The creator approved the V1 UI review on 25 November 2026. The [screen review in
 | 1 | `feature/public-homepage` | Approved responsive homepage runs in Next.js with samples, storyboard cue, translucent navigation, and theme toggle. Browser review is complete. |
 | 2 | `feature/pilot-access` | An operator-provisioned creator can securely sign in and out. Absent, expired and disabled sessions recover safely. |
 | 3 | `feature/private-projects` | Creator can create, rename, reopen and delete their own projects. Two accounts see isolated project lists. |
-| 4 | `feature/brief-autosave` | Plan tab saves and restores a brief and handles conflicting edits. |
-| 5 | `feature/storyboard-planning` | Creator reviews and approves the prompt. A Gemini Interactions job produces a Zod-validated draft and safe failures. |
-| 6 | `feature/storyboard-editor` | Creator edits scenes, narration, cues and supported visuals. Review catches blocked assets and preserves exact approval revisions. |
-| 7 | `feature/storyboard-revisions` | Scoped AI suggestions can be compared and applied safely. Stale candidates and version restoration are handled. |
-| 8 | `feature/narration-timing` | Approved text yields verified ElevenLabs audio, captions and compiled motion cues. |
-| 9 | `feature/render-export` | Durable Remotion generation, verification, preview and private MP4 download work for a new topic. Previous ready media survives failed revisions. |
-| 10 | `feature/instagram-connection` | An eligible professional account connects, reconnects and disconnects through the official flow. |
-| 11 | `feature/instagram-post-now` | Exact approved media and social caption post once. Unknown outcomes reconcile safely. |
-| 12 | `feature/instagram-scheduling` | Scheduled intents pin the destination, media, caption and timezone. Cancellation, rescheduling and recovery are reviewed. |
+| 4 | `feature/brief-autosave` | A full Plan workspace captures the video topic, audience, learning objective, sources and optional duration. It autosaves, restores and handles conflicts. |
+| 5 | `feature/admin-invites` | Only the owner account can issue or revoke email-bound invites. An invited creator can redeem a one-time link and set their own password. |
+| 6 | `feature/storyboard-planning` | Creator reviews and approves the prompt. A Gemini Interactions job produces a Zod-validated draft and safe failures. |
+| 7 | `feature/storyboard-editor` | Creator edits scenes, narration, cues and supported visuals. Review catches blocked assets and preserves exact approval revisions. |
+| 8 | `feature/storyboard-revisions` | Scoped AI suggestions can be compared and applied safely. Stale candidates and version restoration are handled. |
+| 9 | `feature/narration-timing` | Approved text yields verified ElevenLabs audio, captions and compiled motion cues. |
+| 10 | `feature/render-export` | Durable Remotion generation, verification, preview and private MP4 download work for a new topic. Previous ready media survives failed revisions. |
+| 11 | `feature/instagram-connection` | An eligible professional account connects, reconnects and disconnects through the official flow. |
+| 12 | `feature/instagram-post-now` | Exact approved media and social caption post once. Unknown outcomes reconcile safely. |
+| 13 | `feature/instagram-scheduling` | Scheduled intents pin the destination, media, caption and timezone. Cancellation, rescheduling and recovery are reviewed. |
 
 Split a slice further if it becomes too large to review in one pass. Use skipped or failed checks as explicit blockers to approval for the affected behavior.
 

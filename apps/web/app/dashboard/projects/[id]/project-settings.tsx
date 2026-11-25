@@ -6,7 +6,7 @@ import { projectError, projectRequest } from '../../project-request';
 
 type Project = NonNullable<Awaited<ReturnType<typeof getProject>>>;
 
-export function ProjectSettings({ initial, language }: { initial: Project; language: string }) {
+export function ProjectSettings({ initial, onRename }: { initial: Project; onRename: (title: string) => void }) {
   const [project, setProject] = useState(initial);
   const [title, setTitle] = useState(initial.title);
   const [pending, setPending] = useState(false);
@@ -15,7 +15,6 @@ export function ProjectSettings({ initial, language }: { initial: Project; langu
   const [notice, setNotice] = useState('');
   const dialog = useRef<HTMLDialogElement>(null);
   const deleteButton = useRef<HTMLButtonElement>(null);
-  const back = '/dashboard';
   const path = '/' + project.id;
 
   async function rename(event: FormEvent<HTMLFormElement>) {
@@ -30,6 +29,7 @@ export function ProjectSettings({ initial, language }: { initial: Project; langu
       });
       setProject(result.data);
       setTitle(result.data.title);
+      onRename(result.data.title);
       setNotice('Project name saved.');
     } catch (error) {
       setError(projectError(error));
@@ -42,7 +42,7 @@ export function ProjectSettings({ initial, language }: { initial: Project; langu
     setDeleteError('');
     try {
       await projectRequest(path, { method: 'DELETE', headers: { 'If-Match': '"' + project.revision + '"' } });
-      location.replace(back);
+      location.replace('/dashboard');
       return;
     } catch (error) {
       setDeleteError(projectError(error));
@@ -52,10 +52,7 @@ export function ProjectSettings({ initial, language }: { initial: Project; langu
 
   return (
     <>
-      <a className="text-link" href={back}>← All projects</a>
-      <div className="project-heading">
-        <div><h1>{project.title}</h1><p>{language} · Draft</p></div>
-      </div>
+      <h2>Project settings</h2>
       <form className="access-form rename-form" onSubmit={rename}>
         <label>Project title<input value={title} onChange={(event) => setTitle(event.target.value)}
           maxLength={120} readOnly={pending} required /></label>

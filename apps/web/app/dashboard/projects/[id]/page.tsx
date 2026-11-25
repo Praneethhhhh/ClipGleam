@@ -2,7 +2,8 @@ import { headers } from 'next/headers';
 import { notFound, redirect } from 'next/navigation';
 import { getPilotUser } from '../../../../lib/auth';
 import { getProject, projectId, projectLanguages } from '../../../../lib/projects';
-import { ProjectSettings } from './project-settings';
+import { briefLimits, getBrief } from '../../../../lib/brief';
+import { ProjectWorkspace } from './project-workspace';
 
 export const metadata = { title: 'Project | ClipGleam' };
 
@@ -11,9 +12,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   let user;
   let project;
+  let brief;
   try {
     user = requestHeaders.get('cookie') ? await getPilotUser(requestHeaders) : null;
     project = user && projectId.safeParse(id).success ? await getProject(user.id, id) : null;
+    brief = user && project ? await getBrief(user.id, id) : null;
   } catch {
     return <div className="project-empty">
       <h1>Project temporarily unavailable</h1>
@@ -22,6 +25,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
     </div>;
   }
   if (!user) redirect('/sign-in');
-  if (!project) notFound();
-  return <ProjectSettings initial={project} language={projectLanguages[project.language]} />;
+  if (!project || !brief) notFound();
+  return <ProjectWorkspace project={project} brief={brief} language={projectLanguages[project.language]} limits={briefLimits} />;
 }

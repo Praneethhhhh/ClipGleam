@@ -156,3 +156,7 @@ The local prototype currently uses Gemini generateContent and hand-written valid
 ## Storyboard customization before generation
 
 Give creators maximum practical control in the combined storyboard. Support direct edits and conversational edits to narration, shot order, timing intent, selected assets, labels, supported camera and motion choices, phrase cues, captions and voice. Preview the actual chosen assets and preview the motion where supported. Keep common controls on the shot and advanced controls expandable. Before approval, flag mismatched spoken cues, missing layers, timing conflicts and unsupported motions. Regeneration always uses an explicit approved version.
+
+## Owner-admin invitations
+
+The project owner's existing creator account is the sole administrator. The deployment binds administrator access to that account's immutable identity. Creators cannot assign or transfer administrator access. The admin can enter an email address, create an expiring one-use invite link, and revoke outstanding invites. The admin shares the link directly. The recipient redeems the invite to set a password for the email bound to the invitation. A redeemed invitation creates creator access only. The invite dashboard does not give the admin access to another creator's private projects.
