@@ -173,3 +173,6 @@ R2 buckets stay private. Creator previews and downloads use session-checked deli
 - [NamasteVideo.ai database design](https://github.com/akshaymarch7/namaste-video-ai/blob/main/DB_DESIGN.md) informed the separation of editor state, immutable versions, work records, indexes and publication history.
 - [MongoDB transaction behavior](https://www.mongodb.com/docs/manual/core/transactions/), [Better Auth MongoDB adapter](https://better-auth.com/docs/adapters/mongo) and [Inngest retries](https://www.inngest.com/docs/durable-execution/guides-and-advanced/error-handling/retries).
 
+## Implemented private project slice
+
+The project library uses the owner, state and recency compound index. Create writes the project, empty brief and draft in a single transaction. The owner-scoped request key derives the project ID and the project records the original creation fields to support replay. Deletion clears the title and creation title, removes the initial brief and draft in one transaction, and retains a minimal project tombstone for repeat-delete handling. Retention and asynchronous cleanup are released with future media and publication features. Use a MongoDB replica set or sharded cluster for project mutations.

@@ -39,7 +39,7 @@ function createPilotAuth(provisioning: boolean) {
       },
     },
   });
-  return { auth, admissions, client, origin: new URL(config.BETTER_AUTH_URL).origin };
+  return { auth, admissions, client, db, origin: new URL(config.BETTER_AUTH_URL).origin };
 }
 
 let instance: ReturnType<typeof createPilotAuth> | undefined;

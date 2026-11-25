@@ -47,6 +47,8 @@ Invites are managed by an operator through deployment-authorized provisioning. V
 The implemented pilot web app uses POST /api/auth/sign-in/email and POST /api/auth/sign-out through Better Auth. Successful sign-in returns 204 with the session cookie. The browser uses a server-guarded dashboard to check the session and current admission. The /api/v1 session and capabilities endpoints above remain part of the planned application API.
 
 
+The private-project slice implements project list, create, read, rename and delete. Creation replays its original response while the project is active and returns the Idempotency-Replayed header. Rename takes the expected revision in the JSON field revision. Delete requires a quoted numeric If-Match revision and returns 204 after synchronously removing the initial brief and draft. Media cleanup, publication reconciliation, asynchronous deletion tracking and library filters beyond active projects enter with their corresponding feature slices.
+
 ## 3. Brief, conversation and Gemini workflows
 
 | Route | Input and result |
