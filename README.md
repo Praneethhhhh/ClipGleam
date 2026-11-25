@@ -28,7 +28,23 @@ Use Node.js 24 and npm. The public homepage lives in the separate web package. T
 ```sh
 cd apps/web
 npm ci
-npm run dev
+npm run dev -- --hostname 127.0.0.1 --port 3015
 ```
 
-Open http://localhost:3000. Run `npm run typecheck` or `npm run build` from the same directory to verify the web app.
+Open http://127.0.0.1:3015. Run `npm run typecheck` or `npm run build` from the same directory to verify the web app.
+
+## Pilot access setup
+
+Keep the local review server at http://127.0.0.1:3015. Copy apps/web/.env.example to apps/web/.env.local and set a MongoDB connection string, a dedicated database name, and a random Better Auth secret of at least 32 characters. Set BETTER_AUTH_URL to the exact review origin locally and the HTTPS application origin in a hosted environment.
+
+From apps/web, provision a pilot account with Node.js 24 and a MongoDB replica set or sharded cluster. Provisioning uses a transaction for the user and credential records. Set CLIPGLEAM_PILOT_PASSWORD in the current process from a masked prompt or approved secret manager before invoking the command. Clear it afterward.
+
+    node --env-file=.env.local scripts/provision-pilot.ts creator@example.com "Pilot Creator"
+
+There is no public registration. Operators disable access and revoke existing sessions with this command.
+
+    node --env-file=.env.local scripts/disable-pilot.ts creator@example.com
+
+The app checks current admission on every private request. Contact the operator for account recovery.
+
+Before hosted rollout, verify that the reverse proxy overwrites forwarded client IP headers and that sign-in throttling works end to end.

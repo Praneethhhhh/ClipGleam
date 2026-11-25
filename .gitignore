@@ -6,3 +6,4 @@ output/
 .next/
 next-env.d.ts
 *.tsbuildinfo
+!apps/web/.env.example

@@ -21,6 +21,7 @@ export default function Home() {
             <a href="#sample">Sample</a>
             <a href="#workflow">How it works</a>
             <ThemeToggle />
+            <a href="/sign-in">Sign in</a>
           </nav>
         </div>
       </header>

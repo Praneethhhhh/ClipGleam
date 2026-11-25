@@ -176,3 +176,23 @@ summary { width: fit-content; cursor: pointer; font-weight: 620; }
 
 
 .sample-status { padding: 0 4px 10px; color: var(--muted); font-size: 14px; }
+
+.access-panel { max-width: 440px; padding-block: clamp(54px, 12vw, 112px); }
+.access-panel h1 { font-size: clamp(42px, 8vw, 62px); }
+.access-panel > p { color: var(--muted); margin-block: 18px 28px; }
+.access-form, .access-form label { display: grid; gap: 8px; }
+.access-form { gap: 16px; }
+.access-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+@media (max-width: 480px) {
+  .nav-row nav { gap: 8px; }
+  .nav-row nav a[href="#workflow"] { display: none; }
+}

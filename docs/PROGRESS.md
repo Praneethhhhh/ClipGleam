@@ -2,21 +2,22 @@
 
 ## Current milestone
 
-The public homepage on feature/public-homepage is ready for creator approval. The creator approved the V1 artboards on 25 November 2026.
+The creator approved the public homepage, which is now on GitHub main. Invite-only access on feature/pilot-access is the current review slice.
 
 | State | Work |
 | --- | --- |
 | Complete | The creator approved the seasons cut as the quality benchmark. The PRD and system design document the editable storyboard and private creator workflow. |
 | Verified | The continents prototype used a Gemini Interactions storyboard, ElevenLabs speech and Remotion motion to produce an 81.1-second vertical MP4. All ten narration cues matched character alignment. FFprobe decoded 2,433 video frames and 3,802 audio frames. |
-| Current | Public homepage is implemented, reviewed and browser-tested on feature/public-homepage. Creator approval is pending. |
+| Complete | The public homepage is approved and on GitHub main. |
+| Current | Pilot access includes operator provisioning, sign-in, a guarded dashboard, sign-out and operator revocation. Creator approval is pending. |
 | Complete | Wrote the API and database contracts, cross-linked the system design, and checked document links, JSON and shared approval/publication fields. |
-| Deferred | Dashboard, account isolation, hosting, Instagram publishing and scheduling implementation. |
+| Deferred | Private project management and account isolation for project data, hosting, Instagram publishing and scheduling. |
 
 ## Next actions
 
 1. Review the [continents cut](../output/seven-continents.mp4). Revise visuals using saved narration when possible.
 2. Review the [API design](API-DESIGN.md) and [database design](DATABASE-DESIGN.md). Confirm pilot limits, delivery and retention defaults before enabling the corresponding features.
-3. Review the public homepage and approve the feature before merging to main. The next branch is pilot access.
+3. Review pilot access and approve the feature before merging to main. Private project management is the next slice.
 
 ## History
 
@@ -71,3 +72,4 @@ The public homepage on feature/public-homepage is ready for creator approval. Th
 | 2026-11-25 | Reviewed and revised all 35 V1 designs in Stitch. | Verified pinned 70% headers, 1440 px desktop and 390 px mobile captures, and zero page-level horizontal overflow. Updated the screen index and design QA notes. |
 | 2026-11-25 | Implemented the public homepage in Next.js on feature/public-homepage and recorded branch, review and approval gates. | Independent subagent review found retry focus and loading feedback issues, corrected before QA. Type check and production build passed. Browser verified seasons playback, AC metadata, Escape focus return, theme switching and persistence, fixed 70% header on scroll, storyboard cue reveal and no page-level overflow at 390 px and 320 px. Media error/retry was source-reviewed. Main approval pending. |
 | 2026-11-25 | Revised the public homepage to use Why We Get Seasons as its sole example and standardized the ClipGleam wordmark, metadata and documentation. | Subagent review found no code blockers. Production build and TypeScript checks passed. Browser confirmed both buttons select the seasons video, closing playback advances, and the header, footer and page title use ClipGleam. Creator approval is pending before merging. |
+| 2026-11-25 | Pushed the approved homepage to GitHub main and implemented invite-only access on feature/pilot-access. | Subagent review drove cookie-only responses, transactional provisioning and a fail-closed dashboard state. Browser verified incorrect credentials, successful sign-in, sign-out and anonymous redirect with disposable MongoDB. HTTP checks covered signup rejection, origin checks, throttling, expiry and revocation. Verified a read-only ping to the configured database. |

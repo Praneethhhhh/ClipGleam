@@ -42,7 +42,10 @@ Routes in sections 2–8 are relative to `/api/v1`. Every private response exclu
 | DELETE /projects/{p} (K, If-Match) | 202 deletion operation. Hide content immediately, fence active work, block unclaimed posts, revoke access and reconcile external effects. Existing Instagram posts stay live. |
 | GET /deletions/{id} | Owner-only status for a hidden project's cleanup, `queued\|running\|waiting_external\|complete\|needs_attention`. Redacted outcomes and timestamps only. |
 
-Invites are managed by an operator through deployment-authorized provisioning. Validate pilot admission before enabling the Better Auth account and on every private request. Disable public registration and alternate auth routes that bypass admission. Use a generic sign-in error for disabled or unknown accounts. An operator stop revokes sessions and blocks new external actions. Choose the provisioned sign-in and account recovery procedure before pilot onboarding.
+Invites are managed by an operator through deployment-authorized provisioning. Validate pilot admission before enabling the Better Auth account and on every private request. Disable public registration and alternate auth routes that bypass admission. Use a generic sign-in error for disabled or unknown accounts. An operator stop revokes sessions and blocks new external actions. Account recovery for this slice is operator-assisted.
+
+The implemented pilot web app uses POST /api/auth/sign-in/email and POST /api/auth/sign-out through Better Auth. Successful sign-in returns 204 with the session cookie. The browser uses a server-guarded dashboard to check the session and current admission. The /api/v1 session and capabilities endpoints above remain part of the planned application API.
+
 
 ## 3. Brief, conversation and Gemini workflows
 
