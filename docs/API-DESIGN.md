@@ -67,6 +67,8 @@ The private-project slice implements project list, create, read, rename and dele
 
 The API stores prompt template version and effective resolved context per call. Treat source text and model output as untrusted claims and data. Planner outputs must pass structural and semantic checks. Report unsupported concepts, missing required visuals and claim-review issues by stable scene/beat ID. A provider timeout or invalid result leaves the previous draft intact. Gemini fallback runs only for eligible failure classes within bounded time and quota. Use one active content pipeline per project for brainstorming, planning, revision or generation. Creator edits and separate publishing workflows can proceed during that operation. A stale response never overwrites a newer draft. If a pilot operator requires exact prompt review for brainstorm or revision as well, route those commands through the same prepared-prompt gate before enabling them.
 
+The Plan workspace uses the brief routes above. PATCH validates the body before updating, compares the stored brief revision and returns the latest brief with a 409 response on conflict. The browser can load that saved version or retry only the fields the creator changed. Successful saves update project recency in the same transaction.
+
 ## 4. Storyboard, assets and previews
 
 | Route | Input and result |
