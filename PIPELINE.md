@@ -1,4 +1,4 @@
-# Clipgleam Pipeline Technical Design and Prototype Plan
+# ClipGleam Pipeline Technical Design and Prototype Plan
 
 The first milestone is one local vertical MP4 generated from a real topic through Gemini, ElevenLabs, and Remotion. The CLI pauses after Gemini saves its storyboard so we can inspect and approve it before calling ElevenLabs. We will review the resulting video together before using this pipeline as the foundation for the application.
 
@@ -24,7 +24,7 @@ Storyboard planning allows two primary attempts with a randomized one-to-two-sec
 
 ## Reviewed motion storyboards
 
-The optional scene visual object declares a trusted template and its cues. Each cue selects an action, a zero-based narration beat, and a spoken phrase. Add a one-based occurrence when the phrase repeats. Clipgleam validates the plan before loading speech and compiles the cues from the recorded alignment. Remotion consumes the resulting frame numbers. The initial scene templates illustrate solar cell layers, photon and electron movement, and a solar circuit.
+The optional scene visual object declares a trusted template and its cues. Each cue selects an action, a zero-based narration beat, and a spoken phrase. Add a one-based occurrence when the phrase repeats. ClipGleam validates the plan before loading speech and compiles the cues from the recorded alignment. Remotion consumes the resulting frame numbers. The initial scene templates illustrate solar cell layers, photon and electron movement, and a solar circuit.
 
 This follows the separation in [NamasteVideo.ai’s technical design](https://github.com/akshaymarch7/namaste-video-ai/blob/main/PIPELINE_TECHNICAL_DESIGN.md). The current Gemini planner still supplies the base script and storyboard. Visual decisions in the reviewed solar plan are authored for this prototype, as they were in the reference repository’s first reviewed water-cycle video. A larger set of visual templates and automatic template selection require separate validation.
 

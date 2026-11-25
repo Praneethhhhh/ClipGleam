@@ -1,4 +1,4 @@
-# Clipgleam V1 System Design
+# ClipGleam V1 System Design
 
 **Version** 1.0 · **Status** Proposed implementation design · **Date** 24 November 2026  
 **Audience** Engineers building the private pilot.  
@@ -94,7 +94,7 @@ The [database design](DATABASE-DESIGN.md) defines collections, indexes, transact
 
 ### Planning and adjustment
 
-Use Gemini Interactions for idea planning, structured storyboards and conversational revision. Clipgleam owns conversation history and can reconstruct calls from approved context. Start with stateless requests where supported, then evaluate provider-side conversation state only if it has a clear benefit. Record the exact model, prompt revision and response provenance per run. Configure verified models and fallbacks server-side. Keep one operation active per project for planning, revision or generation, while allowing the creator to work on a draft.
+Use Gemini Interactions for idea planning, structured storyboards and conversational revision. ClipGleam owns conversation history and can reconstruct calls from approved context. Start with stateless requests where supported, then evaluate provider-side conversation state only if it has a clear benefit. Record the exact model, prompt revision and response provenance per run. Configure verified models and fallbacks server-side. Keep one operation active per project for planning, revision or generation, while allowing the creator to work on a draft.
 
 Validate Gemini responses and internal transitions with versioned Zod schemas. Perform separate semantic validation for IDs, referenced assets, supported actions, cue occurrences, scene lengths and factual-review flags. Reject model-supplied code and arbitrary URLs. A valid response remains a draft. During the pilot, record approval of the exact planning prompt before submission. Require approval of the generated storyboard before full speech or encoding.
 
@@ -185,7 +185,7 @@ Open implementation choices include host and quota limits, provider model and vo
 ### References
 
 - [NamasteVideo.ai system design](https://github.com/akshaymarch7/namaste-video-ai/blob/main/SYSTEM_DESIGN.md), reference for modular boundaries, immutable media versions, durable jobs, private delivery and publication reconciliation.
-- [Clipgleam V1 PRD](PRD.md), [progress log](PROGRESS.md), [quality standard](VIDEO-QUALITY.md) and [pipeline technical design](../PIPELINE.md).
+- [ClipGleam V1 PRD](PRD.md), [progress log](PROGRESS.md), [quality standard](VIDEO-QUALITY.md) and [pipeline technical design](../PIPELINE.md).
 
 ### Storyboard editing boundary
 

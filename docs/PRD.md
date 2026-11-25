@@ -1,10 +1,10 @@
-# Clipgleam Product Requirements Document
+# ClipGleam Product Requirements Document
 
 **Version:** 1.0 · **Status:** Draft for product approval · **Date:** 24 November 2026
 
 ## 1. Product summary
 
-Clipgleam helps educators, coaches, social creators and brands turn an idea into a short animated explanation. The creator reviews a combined script and storyboard, generates a narrated and captioned video, and downloads it or publishes it to Instagram. A brand can explain a product or service using the same teaching workflow. Educational and product explainers are V1’s focus. The brand can later expand to formats such as memes and news.
+ClipGleam helps educators, coaches, social creators and brands turn an idea into a short animated explanation. The creator reviews a combined script and storyboard, generates a narrated and captioned video, and downloads it or publishes it to Instagram. A brand can explain a product or service using the same teaching workflow. Educational and product explainers are V1’s focus. The brand can later expand to formats such as memes and news.
 
 **Product promise:** Turn one idea into a video clear enough to teach from and polished enough to share. The creative outcome is the main product test. The dashboard should make that outcome easy to produce and revise.
 
@@ -135,9 +135,9 @@ Resolve the render host and capacity, invitation method, provider model and voic
 ## References
 
 - [NamasteVideo.ai PRD](https://github.com/akshaymarch7/namaste-video-ai/blob/main/PRD.md), reference for the four-step flow, independent accounts, numbered requirements, publishing and recovery cases.
-- [Clipgleam video quality standard](VIDEO-QUALITY.md), approved visual and editorial benchmark.
+- [ClipGleam video quality standard](VIDEO-QUALITY.md), approved visual and editorial benchmark.
 - [Pipeline technical design](../PIPELINE.md), local prototype evidence and reproduction details.
-- [Clipgleam progress log](PROGRESS.md), decisions, implementation evidence and current milestone.
+- [ClipGleam progress log](PROGRESS.md), decisions, implementation evidence and current milestone.
 
 ## Visual asset sourcing and approval
 

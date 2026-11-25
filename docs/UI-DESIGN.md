@@ -1,20 +1,20 @@
-# Clipgleam homepage and visual foundation
+# ClipGleam homepage and visual foundation
 
 **Status** Proposed for creator review · **Date** 24 November 2026  
 **Scope** Public, signed-out homepage and its interaction states. Build later product screens from the approved direction.
 
 ## Reference study
 
-| Reference | Observation | Clipgleam application |
+| Reference | Observation | ClipGleam application |
 | --- | --- | --- |
 | [Apple homepage](https://www.apple.com/) | Each flagship section establishes a headline, a concise promise, a short action row and a dominant product image. Distinct lighter and darker art directions can coexist across campaigns. | Give the homepage one promise and one recognizable sample video. Keep the site theme independently selectable. Avoid stacking unrelated calls to action. |
 | [iPhone lineup](https://www.apple.com/iphone/) | High-level browsing and detailed comparison live at different levels. Repeated summaries scan because they follow a consistent content order. | Keep navigation limited to Examples, How it works and Sign in. Sample entries show title and preview affordance with optional verified duration. |
 | [MacBook Air](https://www.apple.com/macbook-air/) | A focused hero leads into highlights and only later more detailed sections. Product photography shows the feature being discussed. Media has an explicit viewing action. | Lead with actual explainer artwork. Keep the workflow to four short steps. Open the sample on demand with accessible player controls. |
 | [iPhone Pro](https://www.apple.com/iphone-18-pro/) | Strong contrast and tightly framed imagery establish a more cinematic direction for a flagship story. | Test a charcoal screening-room concept with one bright film poster. Preserve the same information hierarchy and navigation as light mode. |
 | [Apple Accessibility](https://www.apple.com/accessibility/) | The overview presents clear entry points, with more detailed descriptions available through focused interactions. | Let viewers discover film controls and explanations where needed. Keep accessible names, keyboard operation, focus indication and captions in the homepage. |
-| [Color](https://developer.apple.com/design/human-interface-guidelines/color), [Dark Mode](https://developer.apple.com/design/human-interface-guidelines/dark-mode), [Typography](https://developer.apple.com/design/human-interface-guidelines/typography), [Icons](https://developer.apple.com/design/human-interface-guidelines/icons) | Consistent semantic roles, independently readable appearances, restrained typography and recognizable symbols. These are platform guidelines. | Translate the principles to web tokens, responsive type, original Clipgleam artwork and a consistent icon family. Use the theme switch for System, Light and Dark. |
+| [Color](https://developer.apple.com/design/human-interface-guidelines/color), [Dark Mode](https://developer.apple.com/design/human-interface-guidelines/dark-mode), [Typography](https://developer.apple.com/design/human-interface-guidelines/typography), [Icons](https://developer.apple.com/design/human-interface-guidelines/icons) | Consistent semantic roles, independently readable appearances, restrained typography and recognizable symbols. These are platform guidelines. | Translate the principles to web tokens, responsive type, original ClipGleam artwork and a consistent icon family. Use the theme switch for System, Light and Dark. |
 
-Clipgleam signature is a white and charcoal interface with blue actions and original explainer artwork. Use the approved folded-pebble mark and a consistent geometric outline family. Use no Apple product imagery, branding, trademarks, SF font files or SF Symbols in the implementation. Apple campaign compositions inform hierarchy, not asset or layout reproduction.
+ClipGleam signature is a white and charcoal interface with blue actions and original explainer artwork. Use the approved folded-pebble mark and a consistent geometric outline family. Use no Apple product imagery, branding, trademarks, SF font files or SF Symbols in the implementation. Apple campaign compositions inform hierarchy, not asset or layout reproduction.
 
 ## Palette
 
@@ -52,7 +52,7 @@ Sample artwork may use cobalt and warm sunlight freely inside media. Use the mai
 | B. Screening Room | Dark stage centers the video. Strongest if seeing the motion quality is the main reason a creator will sign in. |
 | C. Storyboard to Screen | Shows the relationship between editable storyboard and video. Strongest if visibility and control before rendering are the main differentiators. |
 
-Each concept serves a visitor coming to inspect Clipgleam or an invited creator who wants to sign in. Homepage content is a concise hero, sample examples, four workflow steps and footer. Direct sign-in links to the invite-only entry. Use no sign-up form or pricing. Design mockups reference original sample art. A shipped player should use verified Clipgleam exports and measured lengths.
+Each concept serves a visitor coming to inspect ClipGleam or an invited creator who wants to sign in. Homepage content is a concise hero, one sample video, four workflow steps and footer. Direct sign-in links to the invite-only entry. Use no sign-up form or pricing. Design mockups reference original sample art. A shipped player should use a verified ClipGleam export and its measured length.
 
 ## Homepage interaction states
 
@@ -70,3 +70,7 @@ Each concept serves a visitor coming to inspect Clipgleam or an invited creator 
 The current direction is one homepage on the private Stitch canvas. The hero pairs the product explanation with one 9:16 still from the approved seasons cut. The fixed header uses a 70% light or dark fill and backdrop blur so it picks up the surface behind it. The wordmark is paired with the approved folded-pebble silhouette. The mark is solid black in light mode, with a light version for dark mode. The same contour is used for the favicon. Four outline icons support the workflow explanation. Earlier concepts are superseded. Open **Clipgleam · Homepage** from the Stitch dashboard, or open the [local homepage preview](../output/Clipgleam-Homepage.html). Check the hierarchy, sample artwork and CTA before extending the UI.
 References for scope and behavior are the [PRD](PRD.md), [system design](SYSTEM-DESIGN.md), [API design](API-DESIGN.md) and [video quality standard](VIDEO-QUALITY.md).
 
+
+## Homepage release decision
+
+Use **ClipGleam** for the wordmark and product name. Feature **Why We Get Seasons** as the sole homepage video, with playback in the hero and the closing example section. Revisit the example selection at the end of the project.

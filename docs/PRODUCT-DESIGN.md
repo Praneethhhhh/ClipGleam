@@ -1,4 +1,4 @@
-# Clipgleam V1 product design review
+# ClipGleam V1 product design review
 
 **Scope** Public homepage, invited account access, private workspace, video creation and Instagram publishing.  
 **Baseline** [Homepage foundation](UI-DESIGN.md) · [PRD](PRD.md) · [System design](SYSTEM-DESIGN.md) · [API design](API-DESIGN.md) · [Database design](DATABASE-DESIGN.md) · [Video quality](VIDEO-QUALITY.md).
@@ -63,13 +63,13 @@ There are **35 numbered review artboards** across thirteen groups. Count primary
 
 ## NamasteVideo.ai comparison
 
-The reference includes 26 numbered artboards plus an existing desktop homepage. Its coverage includes access, unavailable projects, populated and empty library, planning, storyboard and save recovery, render and caption review, publishing, Instagram connection, and ten mobile treatments. I used its review structure and screen coverage to check Clipgleam's inventory. Clipgleam adds the pilot prompt-approval surface, invited onboarding concept, storyboard asset inspection, motion references and distinct global/project navigation. Clipgleam’s current API routes and scope determine the supported actions. For example, Clipgleam reviews captions in Preview and routes spoken changes back to the storyboard. Caption editing directly on an encoded output would need a separate contract. [NamasteVideo.ai screen review index](https://github.com/akshaymarch7/namaste-video-ai/blob/main/design/SCREEN_REVIEW_INDEX.md)
+The reference includes 26 numbered artboards plus an existing desktop homepage. Its coverage includes access, unavailable projects, populated and empty library, planning, storyboard and save recovery, render and caption review, publishing, Instagram connection, and ten mobile treatments. I used its review structure and screen coverage to check ClipGleam's inventory. ClipGleam adds the pilot prompt-approval surface, invited onboarding concept, storyboard asset inspection, motion references and distinct global/project navigation. ClipGleam’s current API routes and scope determine the supported actions. For example, ClipGleam reviews captions in Preview and routes spoken changes back to the storyboard. Caption editing directly on an encoded output would need a separate contract. [NamasteVideo.ai screen review index](https://github.com/akshaymarch7/namaste-video-ai/blob/main/design/SCREEN_REVIEW_INDEX.md)
 
 ## Effects with a purpose
 
 | Reference | Decision | Placement and fallback |
 | --- | --- | --- |
-| [Aceternity Spotlight](https://ui.aceternity.com/components/spotlight) | Reinterpret the light pool with Clipgleam’s neutral and restrained cool tones. | Behind the single vertical hero sample. Low contrast, stays outside text. Static in reduced-motion and narrow touch layouts. |
+| [Aceternity Spotlight](https://ui.aceternity.com/components/spotlight) | Reinterpret the light pool with ClipGleam’s neutral and restrained cool tones. | Behind the single vertical hero sample. Low contrast, stays outside text. Static in reduced-motion and narrow touch layouts. |
 | [Aceternity moving border](https://ui.aceternity.com/components/moving-border) | Use the idea of a short edge emphasis without a repeating chase. | Optional one-time accent when the selected storyboard shot or completed render becomes active. Keep normal focus outlines and selected labels. |
 | [Aceternity background beams](https://ui.aceternity.com/components/background-beams) | Retain the lighting cue as a visual reference for the media itself. | Reserve expressive beams for sample artwork. The signed-in app prioritizes the storyboard and status. |
 | [Motion accessibility guidance](https://motion.dev/docs/react-use-reduced-motion) | Respect system motion preferences. | Keep stable content and focus across layout changes. Remove decorative travel and fade effects in reduced-motion. |

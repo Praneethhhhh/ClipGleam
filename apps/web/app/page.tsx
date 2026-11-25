@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { Brand, ThemeToggle, SamplePlayer } from './homepage-controls';
 
+const seasons = { title: 'Why We Get Seasons', source: '/samples/seasons.mp4', poster: '/samples/seasons.png' };
+
 const steps = [
   ['Start with an idea', 'Enter a topic or brainstorm a teaching angle.'],
   ['Edit the storyboard', 'Refine the script, reorder scenes and preview the motion.'],
@@ -32,15 +34,15 @@ export default function Home() {
               motion graphics, voiceover and captions.
             </p>
             <div className="actions">
-              <SamplePlayer title="Why We Get Seasons" source="/samples/seasons.mp4"
-                poster="/samples/seasons.png" buttonLabel="Watch sample" primary />
+              <SamplePlayer {...seasons}
+                buttonLabel="Watch sample" primary />
               <a className="text-link" href="#workflow">How it works <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <figure className="film" id="sample">
-            <Image src="/samples/seasons.png" alt="A scene from Why We Get Seasons showing sunlight reaching a tilted Earth"
+            <Image src={seasons.poster} alt="A scene from Why We Get Seasons showing sunlight reaching a tilted Earth"
               width={360} height={640} preload unoptimized />
-            <figcaption><strong>Why We Get Seasons</strong><span>1:28</span></figcaption>
+            <figcaption><strong>{seasons.title}</strong><span>1:28</span></figcaption>
           </figure>
         </section>
 
@@ -50,7 +52,7 @@ export default function Home() {
             <p className="section-intro">Edit the script and see what will appear as the narrator explains it.</p>
             <div className="story-grid">
               <div className="story-panel">
-                <h3>Why We Get Seasons</h3>
+                <h3>{seasons.title}</h3>
                 <ol>
                   <li><strong>Earth tilts.</strong> Show the tilted axis beside a straight reference line.</li>
                   <li><strong>Sunlight spreads out.</strong> Show the beam making a wider patch at an angle.</li>
@@ -82,11 +84,10 @@ export default function Home() {
 
         <section className="shell section example" aria-labelledby="example-title">
           <div>
-            <h2 id="example-title">How Air Conditioning Works</h2>
-            <p className="section-intro">See how an AC moves heat from indoors to outdoors.</p>
+            <h2 id="example-title">{seasons.title}</h2>
+            <p className="section-intro">See why sunlight hits each hemisphere at a different angle throughout the year.</p>
           </div>
-          <SamplePlayer title="How Air Conditioning Works" source="/samples/air-conditioning.mp4"
-            poster="/samples/air-conditioning.png" buttonLabel="Watch example" />
+          <SamplePlayer {...seasons} buttonLabel="Watch example" />
         </section>
       </main>
 

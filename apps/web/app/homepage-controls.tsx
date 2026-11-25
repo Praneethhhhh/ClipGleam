@@ -4,11 +4,11 @@ import { useEffect, useId, useRef, useState } from 'react';
 
 export function Brand() {
   return (
-    <a className="brand" href="/" aria-label="Clipgleam home">
+    <a className="brand" href="/" aria-label="ClipGleam home">
       <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
         <path fill="currentColor" d="M11.8 7.1C15.9 4.9 22 5.4 26 9.1c4.5 4.2 4.1 10.4.2 14.2-3.8 3.7-10.5 4.9-16.1 2.5C4.6 23.5 2.2 19 3.6 14.4c.5-1.5 1.2-2.8 2.3-3.9l5.5.7c.7.1 1.1-.5.9-1.1L11.8 7.1Z" />
       </svg>
-      Clipgleam
+      ClipGleam
     </a>
   );
 }

@@ -1,4 +1,4 @@
-# Working in Clipgleam
+# Working in ClipGleam
 
 The project root is G:\Projects\Ai video generator. Verify the working directory before executing commands or writing files. Use the G: root explicitly if a session opens elsewhere.
 
@@ -15,3 +15,5 @@ Before planning, narrating or rendering an explainer, read docs/VIDEO-QUALITY.md
 ## Feature delivery
 
 Follow docs/DEVELOPMENT-PLAN.md. Work on one small feature branch at a time. After implementing a feature, obtain a subagent code review and resolve actionable findings. Run verification and manually exercise the running feature in a browser. Record the evidence in docs/PROGRESS.md, then commit to the feature branch. Wait for explicit creator approval of that feature before merging or pushing it to main. Before a commit, verify staged paths exclude credentials and local-only artifacts.
+
+Use **ClipGleam** in user-facing copy, accessible names, page metadata and project documentation. Preserve technical identifiers and external resource names.

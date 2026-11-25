@@ -1,4 +1,4 @@
-# Clipgleam V1 Design QA Notes
+# ClipGleam V1 Design QA Notes
 
 **Updated** 25 November 2026  
 **Review set** [Screen review index](SCREEN-REVIEW-INDEX.md) · [Product design map](PRODUCT-DESIGN.md) · [Chrome measurements](../output/v1-design-review/qa-captures/review-audit.json)

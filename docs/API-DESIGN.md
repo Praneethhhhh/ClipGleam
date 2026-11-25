@@ -1,4 +1,4 @@
-# Clipgleam V1 API Design
+# ClipGleam V1 API Design
 
 **Version** 1.0 · **Status** Proposed implementation contract · **Date** 24 November 2026
 

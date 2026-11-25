@@ -1,4 +1,4 @@
-# Clipgleam Video Quality Standard
+# ClipGleam Video Quality Standard
 
 ## Approved benchmark
 
@@ -39,6 +39,6 @@ A render is ready for creator review once these checks pass. The creator's playb
 - Use a shared renderer and a small set of trusted visual components. Add specialized components for behavior that requires domain logic, such as computing binary-search states or showing a phase change. Keep the chosen assets and actions explicit in the storyboard.
 - Show the actual planned assets in storyboard previews. Inspect representative frames before and after key cues and check layouts with long labels. Bundle a consistent typeface locally. Select the font during visual implementation.
 - Validate the storyboard schema, supported actions and cue occurrences. Bind approval to a specific version. Check recorded alignment against the approved script and reuse valid speech when only visuals change.
-- Combine automated export checks with human review on a phone. Review accuracy, relevance, motion timing, pronunciation, narration continuity and caption legibility. Use the approved seasons cut as Clipgleam's quality benchmark.
+- Combine automated export checks with human review on a phone. Review accuracy, relevance, motion timing, pronunciation, narration continuity and caption legibility. Use the approved seasons cut as ClipGleam's quality benchmark.
 
 Reference: [NamasteVideo.ai pipeline technical design](https://github.com/akshaymarch7/namaste-video-ai/blob/main/PIPELINE_TECHNICAL_DESIGN.md).

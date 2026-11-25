@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Clipgleam',
+  title: 'ClipGleam',
   description: 'Turn ideas into short animated explainers with motion graphics, voiceover and captions.',
 };
 

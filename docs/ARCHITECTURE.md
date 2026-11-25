@@ -1,4 +1,4 @@
-# Clipgleam Architecture
+# ClipGleam Architecture
 
 ## Stack and responsibilities
 
@@ -40,4 +40,4 @@ Schedules bind the exact render, caption, account and execution time. Store UTC 
 
 Rollout order is live prototype review, dashboard and durable generation, preview and export, then Instagram and invited pilot. Before public hosting, settle retention, recovery, provider licensing, compute costs and the practical supported-language list.
 
-For current implementation decisions, read [Clipgleam V1 System Design](SYSTEM-DESIGN.md). This file is the earlier architecture overview.
+For current implementation decisions, read [ClipGleam V1 System Design](SYSTEM-DESIGN.md). This file is the earlier architecture overview.

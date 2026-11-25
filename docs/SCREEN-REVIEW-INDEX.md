@@ -1,9 +1,9 @@
-# Clipgleam V1 Screen Review Index
+# ClipGleam V1 Screen Review Index
 
 **Updated** 25 November 2026  
 **Status** QA revision ready for creator review
 
-This is the canonical order for the 35 Clipgleam V1 Stitch artboards. Each preview and full-page Chrome capture reflects the QA revision. The Stitch screen IDs and review order are the same. In Stitch, open **Clipgleam · V1 Product Design Review** in the connected account and match the numbered title. The screen IDs identify the exact resources. Use the local previews if private Stitch access returns 404.
+This is the canonical order for the 35 ClipGleam V1 Stitch artboards. Each preview and full-page Chrome capture reflects the QA revision. The Stitch screen IDs and review order are the same. In Stitch, open **Clipgleam · V1 Product Design Review** in the connected account and match the numbered title. The screen IDs identify the exact resources. Use the local previews if private Stitch access returns 404.
 
 [Local review gallery](../output/v1-design-review/index.html) · [Stitch dashboard](https://stitch.withgoogle.com/) · [Stitch manifest](../output/v1-design-review/stitch-manifest.json) · [Design QA notes](DESIGN-QA-NOTES.md) · [Product design map](PRODUCT-DESIGN.md)
 

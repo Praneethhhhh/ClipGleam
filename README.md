@@ -1,6 +1,6 @@
-# Clipgleam
+# ClipGleam
 
-Clipgleam is a video creation platform. V1 helps teachers, creators and brands turn an idea into an animated educational or product explainer.
+ClipGleam is a video creation platform. V1 helps teachers, creators and brands turn an idea into an animated educational or product explainer.
 
 The engine prototype has produced the creator-approved seasons video. The creator approved the V1 design review. Development proceeds one feature branch at a time.
 

@@ -1,4 +1,4 @@
-# Clipgleam feature delivery plan
+# ClipGleam feature delivery plan
 
 The creator approved the V1 UI review on 25 November 2026. The [screen review index](SCREEN-REVIEW-INDEX.md), [design QA notes](DESIGN-QA-NOTES.md), [PRD](PRD.md), [system design](SYSTEM-DESIGN.md), [API design](API-DESIGN.md) and [database design](DATABASE-DESIGN.md) define the design baseline.
 
