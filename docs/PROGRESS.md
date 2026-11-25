@@ -2,7 +2,7 @@
 
 ## Current milestone
 
-The creator approved the public homepage, which is now on GitHub main. The creator verified sign-in and accepted invite-only access, which is now on GitHub main. The Plan workspace is ready for review on feature/brief-autosave, based on feature/private-projects. Both branches await explicit approval to merge to main.
+The creator approved the public homepage, which is now on GitHub main. The creator verified sign-in and accepted invite-only access, which is now on GitHub main. The creator positively reviewed the Plan workspace. Owner-only invitations are ready for review on feature/admin-invites, based on the private-project and Plan workspace branches. The three slices await explicit approval to merge to main.
 
 | State | Work |
 | --- | --- |
@@ -11,16 +11,17 @@ The creator approved the public homepage, which is now on GitHub main. The creat
 | Complete | The public homepage is approved and on GitHub main. |
 | Complete | Pilot access includes operator provisioning, sign-in, a guarded dashboard, sign-out and operator revocation. |
 | Verified | Private project library supports create, reopen, rename and delete, with two-account isolation verified. |
-| Current | Plan workspace supports autosave, reopening, project recency and conflict recovery. |
+| Verified | Plan workspace supports autosave, reopening, project recency and conflict recovery. |
 | Complete | Wrote the API and database contracts, cross-linked the system design, and checked document links, JSON and shared approval/publication fields. |
-| Next | Owner-admin invites. Only the existing owner identity can issue or revoke invitations. |
+| Current | The existing owner identity can issue or revoke email-bound invitations. A redeemed invitation creates an ordinary creator account. |
+| Next | Storyboard prompt review and generation. |
 | Deferred | Hosted rollout, Instagram publishing and scheduling. |
 
 ## Next actions
 
 1. Review the [continents cut](../output/seven-continents.mp4). Revise visuals using saved narration when possible.
 2. Review the [API design](API-DESIGN.md) and [database design](DATABASE-DESIGN.md). Confirm pilot limits, delivery and retention defaults before enabling the corresponding features.
-3. Review the Plan workspace and explicitly approve the private-project and planning slices before merging to main. Owner-admin invitations are next.
+3. Review owner invitations and explicitly approve the three dependent slices before merging to main.
 
 ## History
 
@@ -78,3 +79,4 @@ The creator approved the public homepage, which is now on GitHub main. The creat
 | 2026-11-25 | Pushed the approved homepage to GitHub main and implemented invite-only access on feature/pilot-access. | Subagent review drove cookie-only responses, transactional provisioning and a fail-closed dashboard state. Browser verified incorrect credentials, successful sign-in, sign-out and anonymous redirect with disposable MongoDB. HTTP checks covered signup rejection, origin checks, throttling, expiry and revocation. Verified a read-only ping to the configured database. |
 | 2026-11-25 | Pushed accepted pilot access to GitHub main. Implemented the owner-scoped project API and project library on feature/private-projects. | Two subagent passes drove fixes to request replay, deletion concurrency, indexing, pending edits and detail outage handling. Build and type checks passed. Browser verified create, language, rename, reopen, cancel, delete and two-account read isolation. API checks covered concurrent replay, stale updates, cross-account reads and writes, and child cleanup on a disposable replica set. |
 | 2026-11-25 | Built the Plan workspace on feature/brief-autosave. Added the sole-admin invitation requirement to the PRD and feature plan. | Subagent reviews drove request bounds, project recency, conflict merge and lost-response recovery. Build and type checks passed. Browser verified autosave, reopen, Settings navigation and a two-tab merge. API QA verified owner isolation, revision conflicts, oversized requests and deleted parents. The remote main push for private projects was withheld by approval review. |
+| 2026-11-25 | Implemented sole-owner invitations, including issue, copy, revoke and recipient setup. Configured the existing active owner account locally. | Backend and UI subagent reviews caught atomicity, token lookup cost, unrelated link removal and recovery copy issues. Production build and type checks passed. Browser QA used disposable accounts to test issue, copy, revoke, acceptance screen and blocked creator access. API QA verified one-time concurrent redemption, expiration, revoked links, origin checks and Better Auth sign-in for an invited account. |

@@ -48,3 +48,11 @@ There is no public registration. Operators disable access and revoke existing se
 The app checks current admission on every private request. Contact the operator for account recovery.
 
 Before hosted rollout, verify that the reverse proxy overwrites forwarded client IP headers and that sign-in throttling works end to end.
+
+## Owner invitations
+
+Set CLIPGLEAM_ADMIN_USER_ID in the web application's ignored environment file to the immutable Better Auth user ID of the sole owner. The account must also have active pilot admission. Leaving the setting blank disables the owner invitation interface.
+
+The owner can open **Manage invitations** from Projects, create a one-use invitation for a specific email, copy its link, and revoke a pending invitation. The recipient sets their password. The app does not send email. Links use the configured application origin, so local preview links work on the computer running the preview. To invite people elsewhere, use an HTTPS deployment and its matching BETTER_AUTH_URL.
+
+Retest invitation redemption and Better Auth sign-in when upgrading the Better Auth MongoDB adapter because the redemption transaction writes the adapter's user and credential records together with the invitation and admission.

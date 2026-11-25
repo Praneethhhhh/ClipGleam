@@ -268,3 +268,19 @@ html[data-theme="dark"] .project-danger { color: #ff8187; }
 @media (max-width: 680px) {
   .brief-workspace { grid-template-columns: 1fr; }
 }
+
+.invitation-panel { max-width: 720px; }
+.invite-form { grid-template-columns: minmax(0, 1fr) auto; align-items: end; margin-bottom: 20px; }
+.invite-link, .invite-notice, .invite-accept { margin-top: 18px; }
+.invite-link button { margin-top: 14px; }
+.invite-history { margin-top: 34px; }
+.invite-history h2 { font-size: 26px; margin-bottom: 12px; }
+.invite-rows { list-style: none; padding: 0; }
+.invite-rows li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.invite-rows strong { overflow-wrap: anywhere; }
+.invite-rows p { color: var(--muted); text-transform: capitalize; }
+.invite-revoke { background: transparent; border: 0; }
+@media (max-width: 520px) {
+  .invite-form { grid-template-columns: 1fr; }
+  .invite-rows li { align-items: flex-start; flex-direction: column; }
+}
